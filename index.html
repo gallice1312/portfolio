@@ -1,153 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-
-  <link rel="stylesheet" href="portfolio.css">
-
-  <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
-
 <body>
-  
-  <nav>
-    <div class="left">
-      <a href="/">Tom Gallice</a>
-    </div>
+    <header class="header">
+        <a href="#" class="logo"> <span>Tom Gallice</span></a>
+        <ul class="nav-links">
+            <li>
+                <a href="#about">About</a>
+            </li>
+             <li>
+                <a href="#experience">Experience</a>
+            </li>
+             <li>
+                <a href="#projects">Projects</a>
+            </li>
+             <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
 
-    <div class="right">
-      <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-github"></i>
-        <span>Github</span>
-      </a>
-      
-      <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-linkedin"></i>
-        <span>Linkedin</span>
-      </a>
-    </div>
-  </nav>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
 
-  <main>
-    <section class="about_me">
-      <div class="text">
-        <h2>Hi, I'm Tom 👋</h2>
-        <p class="aboutme__txt">
-My name is Tom Gallice, and I’m a first-year Bachelor student at Epitech, where I’m developing strong skills in technology and problem-solving.
-I’m a motivated and ambitious student with a deep passion for financial markets and how technology can transform them. I enjoy learning new things, taking on challenges, and pushing myself to achieve excellence in everything I do.
+        <a href="https://github.com/gallice1312" target="_blank" class="visit-button">Visit Github</a>
 
-Outside of my studies, I’ve been playing tennis since I was three years old and competing for more than ten years. This project has taught me discipline, focus, and resilience, qualities that I apply both on and off the court.
+    </header>
+    <section id="about" class="about">
+        <div class="about-container">
+            <img src="./image/tomNoir-removebg-preview.png" alt="">
+            <div class="about-info">
 
-I’m someone who values teamwork, continuous improvement, and creativity. My goal is to keep growing, contribute to meaningful projects, and bring value to every team I join.
-
-
-</p>
-
-        <div class="links">
-          <a href="#skills">
-            <i class="fa-solid fa-code"></i>
-            <span>Skills</span>
-          </a>
-          
-          <a href="#project">
-            <i class="fa-solid fa-pen"></i>
-            <span>project</span>
-          </a>
-          
-          <a href="#contact">
-            <i class="fa-solid fa-envelope"></i>
-            <span>Contact</span>
-          </a>
+                <div class="about_text">
+                    <h3>Hi, I'm</h3>
+                    <h1>Tom Gallice</h1>
+                    <span>Epitech student</span>
+                </div>
+                <div class="button-grp">
+                     <a href="./public/image/cv-exemple.jpg" download class="btn">Download CV</a>
+                     <div class="btn">Contact</div>
+                </div>
+                <div class="social">
+                    <a href="https://github.com/gallice1312" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tom-gallice-b2ab2733b/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="headshot">
-        <img src="./image/tomNoir.png" alt="tom gallice photo">
-      </div>
     </section>
+    <section id="experience" class="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-info">
+            <div class="grid">
+                <div class="grid-card">
+                    <span>frontend developper</span>
+                    <h3> 5years</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, tempora.</p>
+                </div>
+
+                <div class="grid-card">
+                    <span>frontend developper</span>
+                    <h3> 5years</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, tempora.</p>
+                </div>
+            
+                <div class="grid-card">
+                    <span>frontend developper</span>
+                    <h3> 5years</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, tempora.</p>
+                </div>
+            
+                <div class="grid-card">
+                    <span>frontend developper</span>
+                    <h3> 5years</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, tempora.</p>
+                </div>
+            </div>
+            <img src="./image/tomNoir-removebg-preview.png" alt="">
+        </div>
+       
+    </section>
+
+    <section id="projects" class="project">
+        <h2 class="section-title">Recent Projects</h2>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="./image/python_invader.png" alt="">
+                <h3>Mario Invader</h3>
+                <p>
+                My First Project at Epitech
+                During my first year at Epitech, I worked on my first project called “Mario Invader”, developed in Python with Vayana Oliny.
+                It was a fun and challenging experience where we combined elements of Super Mario and Space Invaders to create an original arcade-style game.
+                This project helped me strengthen my programming skills, improve my teamwork, and better understand game logic, object-oriented programming, and user interaction.</p>
+                <div class="button-grp">
+                    <a href="https://github.com/gallice1312/game-vayana-feat-tom" target="_blank" class="project-button">Github Repo</a>
+                </div>
+            </div>
+            <div class="project-grid">
+            <div class="project-card">
+                <img src="./image/portfolio.png" alt="">
+                <h3>My Portfolio</h3>
+                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, adipisci?</p>
+                <div class="button-grp">
+                    <div class="project-button">Github Repo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="input-box">
+
+            <h2 class="section-title">Contact Me</h2>
+
+            <div class="input">
+                <form action="/form.php" method="post">
+                <input type="text" placeholder="example@email.com">
+                <i class="fa-solid fa-envelope"></i>
+                </form>
+            </div>
+            <div class="project-button">Submit</div>
+        </div>
+    </section>
+
+    <footer>
+
+        <ul>
+            <li>
+                <a href="#about">About</a>
+            </li>
+             <li>
+                <a href="#experience">Experience</a>
+            </li>
+             <li>
+                <a href="#projects">Projects</a>
+            </li>
+             <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+        <p class="copyright">All rights reserved | Tom Gallice</p>
+    </footer>
+     
 
     
-    <section id="skills" class="skills-section">
-      <h2>Skills</h2>
-      <div class="text">
-        <p>
-          I’m currently in a learning phase my skills in Python, HTML, and CSS are at an intermediate level, and I’m actively working to improve and perfect them through personal projects and continue to practice.
-        </p>
-
-      </div>
-
-      <div class="cells">
-        <div class="cell">
-          <img src="image/html.png" alt="html logo">
-          <span>HTML</span>
-        </div>
-        
-        <div class="cell">
-          <img src="image/css-fcba6b473cb1125595dc28163be24eb673907258b5f6f6c82967a0587a9df20c.svg" alt="css logo">
-          <span>CSS</span>
-        </div>
-        
-        <div class="cell">
-          <img src="image/Python.png" alt="python logo">
-          <span>Python</span>
-        </div>
-        
-        </div>
-      </div>
-    </section>
-
-    
-    <section id="project" class="project-section">
-      <h2>project</h2>
-      <div class="group">
-        <div class="person-details">
-          <img src="image/python_invader.png">
-          <p>My First Project at Epitech
-
-          During my first year at Epitech, I worked on my first project called “Mario Invader”, developed in Python with Vayana Oliny.
-          It was a fun and challenging experience where we combined elements of Super Mario and Space Invaders to create an original arcade-style game.
-          This project helped me strengthen my programming skills, improve my teamwork, and better understand game logic, object-oriented programming, and user interaction.</p>
-          <p></p>
-        </div>
-
-        <div class="text">
-         
-        </div>
-      </div>
-    </section>
-
-    
-    <section id="contact" class="contact-section">
-      <h2>Contact</h2>
-
-      <div class="group">
-        <div class="text">
-        </div>
-
-        <form>
-          <label for="name">Name</label>
-          <input type="text" id="name">
-
-          <label for="email">Email</label>
-          <input type="email" id="email">
-
-          <label for="message">Message</label>
-          <textarea id="message" cols="30" rows="10"></textarea>
-
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </section>
-  </main>
-    <video autoplay muted loop id="myVideo">
-  <source src="image/fond.mp4" type="video/mp4">
-    </video>
+    <script src="../script.js"></script>
 </body>
 </html>
