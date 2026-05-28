@@ -12,7 +12,7 @@
   }
 
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
   }
 
   ::-webkit-scrollbar-track {
@@ -20,7 +20,11 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-accent rounded-full;
+    @apply bg-accent/60 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent;
   }
 }
 
@@ -38,14 +42,53 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5;
+    @apply relative inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-accent/30 hover:-translate-y-0.5 active:translate-y-0 overflow-hidden;
+  }
+
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/15 to-transparent transition-transform duration-700 ease-out;
+  }
+
+  .btn-primary:hover::before {
+    @apply translate-x-full;
   }
 
   .btn-outline {
-    @apply inline-flex items-center gap-2 border border-accent text-accent hover:bg-accent hover:text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200;
+    @apply inline-flex items-center gap-2 border border-accent/60 text-accent hover:bg-accent hover:text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0;
   }
 
   .card {
-    @apply bg-navy-800 border border-white/5 rounded-xl p-6 hover:border-accent/30 transition-all duration-300;
+    @apply bg-navy-800/80 border border-white/5 rounded-xl p-6 hover:border-accent/30 transition-all duration-300;
+  }
+
+  .text-gradient-accent {
+    background: linear-gradient(90deg, #60a5fa, #818cf8, #60a5fa);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 8s ease-in-out infinite;
+  }
+
+  .shine {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.18) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3s linear infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
